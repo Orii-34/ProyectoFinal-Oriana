@@ -1,16 +1,18 @@
 public class Pokemon{
-    private String tipos;
-    private int estadisticas;
+    private String tipo;
+    private int estadistica;
     private String nombre;
     private int nivel;
     private int nivAmistad;
+    private int vida;
+    private int fuerza;
 
-    public String getTipos(){
-        return tipos;
+    public String getTipo(){
+        return tipo;
     }
 
-    public int getEstadisticas(){
-        return estadisticas;
+    public int getEstadistica(){
+        return estadistica;
     }
 
     public String getNombre(){
@@ -25,9 +27,17 @@ public class Pokemon{
         return nivAmistad;
     }
 
-    public void setEstadisticas(int estadisticas){
-        if (estadisticas >= 0){
-            this.estadisticas = estadisticas;
+    public int getVida(){
+        return vida;
+    }
+
+    public int getFuerza(){
+        return fuerza;
+    }
+
+    public void setEstadistica(int estadistica){
+        if (estadistica >= 0){
+            this.estadistica = estadistica;
         }else {
             System.out.println("Estadística inválida");
         }
@@ -49,15 +59,37 @@ public class Pokemon{
         }
     }
 
-    public void mostrarEvolucion(){
+    public void setVida(int vida){
+        if (vida >= 1){
+            this.vida = vida;
+        }else{
+            System.out.println("Vida inválida");
+        }
+    }
+
+    public void setFuerza(int fuerza){
+        if (fuerza >= 10){
+            this.vida = vida;
+        }else{
+            System.out.println("Fuerza inválida");
+        }
+    }
+
+    public void mostrarEvolNivel(){
         if (nivel >= 16){
             System.out.println("Tu pokémon a evolucionado");
-        }else if (nivAmistad >= 220){
+        }else if (nivel >= 32){
             System.out.println("Tu pokémon a evolucionado");
         }else{
 
         }
     }
 
+    public void mostrarEvolAmistad(){
+        if (nivAmistad >= 220){
+            System.out.println("Tu pokémon a evolucionado");
+        }else{
 
+        }
+    }
 }
